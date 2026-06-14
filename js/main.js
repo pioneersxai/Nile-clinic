@@ -130,7 +130,8 @@ contactForm.addEventListener('submit', (e) => {
     
     // Create WhatsApp message
     const message = createWhatsAppMessage(data);
-    const whatsappUrl = `https://wa.me/9665477705498?text=${encodeURIComponent(message)}`;
+    const waNumber = (typeof BRAND !== 'undefined') ? BRAND.whatsapp : '9665477705498';
+    const whatsappUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
     
     // Open WhatsApp
     window.open(whatsappUrl, '_blank');
@@ -296,7 +297,8 @@ function animateCounters() {
 const footerYear = document.querySelector('.footer-bottom p');
 if (footerYear) {
     const currentYear = new Date().getFullYear();
-    footerYear.textContent = `© ${currentYear} PioneerX. جميع الحقوق محفوظة.`;
+    const brandName = (typeof BRAND !== 'undefined') ? BRAND.name : 'PioneersX';
+    footerYear.textContent = `© ${currentYear} ${brandName}. جميع الحقوق محفوظة.`;
 }
 
 /**
@@ -370,7 +372,7 @@ if ('PerformanceObserver' in window) {
  */
 console.log('%c🚀 PioneerX', 'color: #ff1e1e; font-size: 24px; font-weight: bold;');
 console.log('%cDeveloped with ❤️ by PioneerX Team', 'color: #b0b0b0; font-size: 14px;');
-console.log('%c👨‍💻 Interested in working with us? Visit: https://pioneersx.store', 'color: #2563eb; font-size: 12px;');
+console.log('%c👨‍💻 Interested in working with us? Visit: ' + ((typeof BRAND !== 'undefined') ? BRAND.domain : 'https://pioneersx.store'), 'color: #2563eb; font-size: 12px;');
 
 /**
  * ===================================
