@@ -145,7 +145,8 @@ function sendWhatsAppMessage(plan = 'general') {
     };
     
     const message = messages[plan] || messages['general'];
-    const whatsappUrl = `https://wa.me/9665477705498?text=${encodeURIComponent(message)}`;
+    const waNumber = (typeof BRAND !== 'undefined') ? BRAND.whatsapp : '9665477705498';
+    const whatsappUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappUrl, '_blank');
 }
