@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://api.pioneersx.store/api';
+const API_BASE_URL = (typeof BRAND !== 'undefined') ? BRAND.apiBase : 'https://api.pioneersx.store/api';
 const API = {
     getToken: () => localStorage.getItem('token'),
     setToken: (t) => localStorage.setItem('token', t),
