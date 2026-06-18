@@ -88,7 +88,7 @@ const BRAND = {
     tagline:     "عيادة نايل — القاهرة",
     description: "رعاية شاملة لأسنانك وابتسامتك بأحدث التقنيات. من التبييض إلى الزراعة — فريقنا معك في كل خطوة.",
     buttons: [
-      { text: "احجز كشف مجاني", href: "#contact",  style: "primary", icon: "fas fa-calendar-check" },
+      { text: "احجز كشف مجاني", href: "#contact",  style: "hero-cta", icon: "fas fa-calendar-check" },
       { text: "واتساب",          href: "whatsapp",  style: "whatsapp", icon: "fab fa-whatsapp" },
     ],
   },
@@ -373,7 +373,7 @@ const BRAND = {
       btnsEl.innerHTML = BRAND.hero.buttons.map(b => {
         const href = b.href === 'whatsapp' ? `https://wa.me/${BRAND.whatsapp}` : b.href;
         const icon = b.icon ? `<i class="${b.icon}"></i> ` : '';
-        const cls  = b.style === 'whatsapp' ? 'btn btn-whatsapp' : b.style === 'primary' ? 'btn btn-primary' : 'btn btn-secondary';
+        const cls  = b.style === 'whatsapp' ? 'btn btn-whatsapp' : b.style === 'primary' ? 'btn btn-primary' : b.style === 'hero-cta' ? 'btn btn-hero-cta' : 'btn btn-secondary';
         const tgt  = b.href === 'whatsapp' ? ' target="_blank"' : '';
         return `<a href="${href}" class="${cls}"${tgt}>${icon}${b.text}</a>`;
       }).join('');
@@ -483,7 +483,7 @@ const BRAND = {
       btns.innerHTML = BRAND.cta.buttons.map(b => {
         const href = b.href === 'whatsapp' ? `https://wa.me/${BRAND.whatsapp}` : b.href;
         const icon = b.icon ? `<i class="${b.icon}"></i> ` : '';
-        const cls  = b.style === 'whatsapp' ? 'btn btn-whatsapp' : b.style === 'primary' ? 'btn btn-primary' : 'btn btn-secondary';
+        const cls  = b.style === 'whatsapp' ? 'btn btn-whatsapp' : b.style === 'primary' ? 'btn btn-primary' : b.style === 'hero-cta' ? 'btn btn-hero-cta' : 'btn btn-secondary';
         const tgt  = b.href === 'whatsapp' ? ' target="_blank"' : '';
         return `<a href="${href}" class="${cls}"${tgt}>${icon}${b.text}</a>`;
       }).join('');
