@@ -72,9 +72,9 @@ const BRAND = {
 
   navLinks: [
     { label: "الرئيسية",   href: "#home" },
-    { label: "خدماتنا",   href: "#services" },
-    { label: "أطباؤنا",   href: "#team" },
-    { label: "تواصل معنا", href: "#contact" },
+    { label: "خدماتنا",   href: "#section-services" },
+    { label: "أطباؤنا",   href: "#section-team" },
+    { label: "تواصل معنا", href: "#section-contact" },
   ],
 
   // ════════════════════════════════════════════════════════
