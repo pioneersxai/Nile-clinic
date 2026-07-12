@@ -1,365 +1,371 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <title>Loading...</title>
-    <link rel="icon" type="image/svg+xml" id="favicon" href="">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <style>
-      /* ── RESET nav completely — override everything ── */
-      #navbar {
-        position:fixed !important; top:0 !important; width:100% !important;
-        background:#ffffff !important;
-        backdrop-filter:none !important;
-        z-index:9000 !important; padding:0 !important;
-        border-bottom:1px solid #e0f2fe !important;
-        box-shadow:none !important;
-        transition:box-shadow .3s !important;
-      }
-      #navbar.scrolled {
-        box-shadow:0 2px 20px rgba(14,165,233,0.1) !important;
-      }
-      #navbar .nav-container {
-        max-width:1200px !important; margin:0 auto !important;
-        display:flex !important; align-items:center !important;
-        justify-content:space-between !important;
-        padding:0 24px !important;
-        height:64px !important;
-        flex-direction:row-reverse !important;
-      }
-      /* Logo — LEFT (visually) in row-reverse RTL */
-      #navbar .brand-logo {
-        font-size:20px !important; font-weight:700 !important;
-        color:#0c4a6e !important; text-decoration:none !important;
-        white-space:nowrap !important;
-        border:none !important; background:none !important; padding:0 !important;
-      }
-      /* Links — RIGHT, الرئيسية far right, تواصل معنا far left */
-      #navbar .nav-links {
-        display:flex !important; align-items:center !important;
-        gap:4px !important; list-style:none !important;
-        margin:0 !important; padding:0 !important;
-        flex-direction:row !important;
-      }
-      #navbar .nav-links li { margin:0 !important; padding:0 !important; }
-      #navbar .nav-links a {
-        color:#64748b !important; text-decoration:none !important;
-        font-size:14px !important; font-weight:500 !important;
-        padding:8px 16px !important; border-radius:8px !important;
-        transition:all .3s !important; display:block !important;
-        border:none !important; background:none !important;
-        box-shadow:none !important;
-        font-family:'Cairo',sans-serif !important;
-      }
-      #navbar .nav-links a:hover { color:#0c4a6e !important; background:#f0f9ff !important; }
-      #navbar .nav-links a::after,
-      #navbar .nav-links a::before { display:none !important; content:none !important; }
-      #navbar .nav-links a.active,
-      #navbar .nav-links li.active a,
-      #navbar .nav-links li:first-child a {
-        border:none !important; background:none !important;
-        color:#64748b !important; box-shadow:none !important;
-      }
-      /* Hide CTA completely */
-      #navbar .nav-cta { display:none !important; }
-      #navbar .mobile-menu-toggle {
-        display:none !important; font-size:1.4rem !important;
-        color:#0c4a6e !important; background:none !important;
-        border:none !important; order:1 !important;
-      }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:url" content="">
+<title>Loading...</title>
+<link rel="icon" type="image/svg+xml" id="favicon" href="">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+/* ── RESET nav completely — override everything ── */
+#navbar {
+position:fixed !important; top:0 !important; width:100% !important;
+background:#ffffff !important;
+backdrop-filter:none !important;
+z-index:9000 !important; padding:0 !important;
+border-bottom:1px solid #e0f2fe !important;
+box-shadow:none !important;
+transition:box-shadow .3s !important;
+}
+#navbar.scrolled {
+box-shadow:0 2px 20px rgba(14,165,233,0.1) !important;
+}
+#navbar .nav-container {
+max-width:1200px !important; margin:0 auto !important;
+display:flex !important; align-items:center !important;
+justify-content:space-between !important;
+padding:0 24px !important;
+height:64px !important;
+flex-direction:row-reverse !important;
+}
+/* Logo — LEFT (visually) in row-reverse RTL */
+#navbar .brand-logo {
+font-size:20px !important; font-weight:700 !important;
+color:#0c4a6e !important; text-decoration:none !important;
+white-space:nowrap !important;
+border:none !important; background:none !important; padding:0 !important;
+}
+/* Accent word (e.g. "Dental") — glowing blue, same pattern as
+   PioneersX's own "Pioneers[X]" logo treatment on the agency site */
+#navbar .brand-logo .logo-accent {
+color:#0ea5e9 !important;
+animation: glowPulse 2s infinite;
+}
+/* Links — RIGHT, الرئيسية far right, تواصل معنا far left */
+#navbar .nav-links {
+display:flex !important; align-items:center !important;
+gap:4px !important; list-style:none !important;
+margin:0 !important; padding:0 !important;
+flex-direction:row !important;
+}
+#navbar .nav-links li { margin:0 !important; padding:0 !important; }
+#navbar .nav-links a {
+color:#64748b !important; text-decoration:none !important;
+font-size:14px !important; font-weight:500 !important;
+padding:8px 16px !important; border-radius:8px !important;
+transition:all .3s !important; display:block !important;
+border:none !important; background:none !important;
+box-shadow:none !important;
+font-family:'Cairo',sans-serif !important;
+}
+#navbar .nav-links a:hover { color:#0c4a6e !important; background:#f0f9ff !important; }
+#navbar .nav-links a::after,
+#navbar .nav-links a::before { display:none !important; content:none !important; }
+#navbar .nav-links a.active,
+#navbar .nav-links li.active a,
+#navbar .nav-links li:first-child a {
+border:none !important; background:none !important;
+color:#64748b !important; box-shadow:none !important;
+}
+/* Hide CTA completely */
+#navbar .nav-cta { display:none !important; }
+#navbar .mobile-menu-toggle {
+display:none !important; font-size:1.4rem !important;
+color:#0c4a6e !important; background:none !important;
+border:none !important; order:1 !important;
+}
 
-      /* ── HERO BUTTONS ── */
-      .hero-buttons .btn-primary {
-        background:#fff !important; color:#0c4a6e !important;
-        border:2px solid #fff !important; box-shadow:0 4px 16px rgba(0,0,0,.15) !important;
-        padding:14px 32px !important; border-radius:30px !important;
-        font-size:16px !important; font-weight:600 !important;
-        font-family:'Cairo',sans-serif !important;
-        text-decoration:none !important; display:inline-flex !important;
-        align-items:center !important; gap:8px !important;
-        cursor:none !important; transition:all .3s !important;
-      }
-      .hero-buttons .btn-primary:hover {
-        background:transparent !important; color:#fff !important;
-        transform:translateY(-2px) !important;
-      }
+/* ── HERO BUTTONS ── */
+.hero-buttons .btn-primary {
+background:#fff !important; color:#0c4a6e !important;
+border:2px solid #fff !important; box-shadow:0 4px 16px rgba(0,0,0,.15) !important;
+padding:14px 32px !important; border-radius:30px !important;
+font-size:16px !important; font-weight:600 !important;
+font-family:'Cairo',sans-serif !important;
+text-decoration:none !important; display:inline-flex !important;
+align-items:center !important; gap:8px !important;
+cursor:none !important; transition:all .3s !important;
+}
+.hero-buttons .btn-primary:hover {
+background:transparent !important; color:#fff !important;
+transform:translateY(-2px) !important;
+}
 
-      @media(max-width:900px){
-        #navbar .nav-links { display:none !important; }
-        #navbar .nav-links.open {
-          display:flex !important; flex-direction:column !important;
-          position:absolute !important; top:64px !important;
-          right:16px !important; left:16px !important;
-          background:#fff !important; border-radius:16px !important;
-          padding:12px !important; box-shadow:0 8px 32px rgba(0,0,0,.1) !important;
-          border:1px solid #e0f2fe !important; gap:2px !important; z-index:9999 !important;
-        }
-        #navbar .nav-links.open a { color:#0c4a6e !important; }
-        #navbar .mobile-menu-toggle { display:block !important; }
-      }
-    </style>
+@media(max-width:900px){
+#navbar .nav-links { display:none !important; }
+#navbar .nav-links.open {
+display:flex !important; flex-direction:column !important;
+position:absolute !important; top:64px !important;
+right:16px !important; left:16px !important;
+background:#fff !important; border-radius:16px !important;
+padding:12px !important; box-shadow:0 8px 32px rgba(0,0,0,.1) !important;
+border:1px solid #e0f2fe !important; gap:2px !important; z-index:9999 !important;
+}
+#navbar .nav-links.open a { color:#0c4a6e !important; }
+#navbar .mobile-menu-toggle { display:block !important; }
+}
+</style>
 </head>
 <body>
-    <div class="cursor-dot" id="cursorDot"></div>
-    <div class="cursor-outline" id="cursorOutline"></div>
-    <div class="loader" id="loader"><div class="loader-spinner"></div></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-outline" id="cursorOutline"></div>
+<div class="loader" id="loader"><div class="loader-spinner"></div></div>
 
-    <!-- NAVBAR -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="brand-logo"></a>
-            <ul class="nav-links" id="navLinks"></ul>
-            <button class="mobile-menu-toggle" id="mobileMenu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
+<!-- NAVBAR -->
+<nav id="navbar">
+<div class="nav-container">
+<a href="#home" class="brand-logo"></a>
+<ul class="nav-links" id="navLinks"></ul>
+<button class="mobile-menu-toggle" id="mobileMenu">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+</nav>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-tag fade-in"></div>
-            <h1 class="hero-title fade-in"></h1>
-            <p class="tagline hero-tagline fade-in"></p>
-            <p class="hero-description fade-in"></p>
-            <div class="hero-buttons fade-in"></div>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="hero-tag fade-in"></div>
+<h1 class="hero-title fade-in"></h1>
+<p class="tagline hero-tagline fade-in"></p>
+<p class="hero-description fade-in"></p>
+<div class="hero-buttons fade-in"></div>
+</div>
+</section>
 
-    <!-- STATS -->
-    <section class="stats section" id="section-stats">
-        <div class="container">
-            <div class="stats-grid"></div>
-        </div>
-    </section>
+<!-- STATS -->
+<section class="stats section" id="section-stats">
+<div class="container">
+<div class="stats-grid"></div>
+</div>
+</section>
 
-    <!-- FEATURES -->
-    <section class="features section" id="section-features">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title fade-in"></h2>
-                <p class="section-subtitle fade-in"></p>
-            </div>
-            <div class="medical-grid"></div>
-        </div>
-    </section>
+<!-- FEATURES -->
+<section class="features section" id="section-features">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title fade-in"></h2>
+<p class="section-subtitle fade-in"></p>
+</div>
+<div class="medical-grid"></div>
+</div>
+</section>
 
-    <!-- SERVICES -->
-    <section class="services section" id="section-services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title fade-in"></h2>
-                <p class="section-subtitle fade-in"></p>
-            </div>
-            <div class="services-grid"></div>
-        </div>
-    </section>
+<!-- SERVICES -->
+<section class="services section" id="section-services">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title fade-in"></h2>
+<p class="section-subtitle fade-in"></p>
+</div>
+<div class="services-grid"></div>
+</div>
+</section>
 
-    <!-- PRODUCTS -->
-    <section class="products section" id="section-products">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title fade-in"></h2>
-                <p class="section-subtitle fade-in"></p>
-            </div>
-            <div class="products-grid"></div>
-        </div>
-    </section>
+<!-- PRODUCTS -->
+<section class="products section" id="section-products">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title fade-in"></h2>
+<p class="section-subtitle fade-in"></p>
+</div>
+<div class="products-grid"></div>
+</div>
+</section>
 
-    <!-- TEAM -->
-    <section class="team section" id="section-team">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title fade-in"></h2>
-                <p class="section-subtitle fade-in"></p>
-            </div>
-            <div class="team-grid"></div>
-        </div>
-    </section>
+<!-- TEAM -->
+<section class="team section" id="section-team">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title fade-in"></h2>
+<p class="section-subtitle fade-in"></p>
+</div>
+<div class="team-grid"></div>
+</div>
+</section>
 
-    <!-- PROCESS -->
-    <section class="process section" id="section-process">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title fade-in"></h2>
-                <p class="section-subtitle fade-in"></p>
-            </div>
-            <div class="process-steps"></div>
-        </div>
-    </section>
+<!-- PROCESS -->
+<section class="process section" id="section-process">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title fade-in"></h2>
+<p class="section-subtitle fade-in"></p>
+</div>
+<div class="process-steps"></div>
+</div>
+</section>
 
-    <!-- CASE STUDIES -->
-    <section class="case-studies section" id="section-casestudies">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title fade-in"></h2>
-                <p class="section-subtitle fade-in"></p>
-            </div>
-            <div class="case-studies-container"></div>
-        </div>
-    </section>
+<!-- CASE STUDIES -->
+<section class="case-studies section" id="section-casestudies">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title fade-in"></h2>
+<p class="section-subtitle fade-in"></p>
+</div>
+<div class="case-studies-container"></div>
+</div>
+</section>
 
-    <!-- CLIENTS -->
-    <section class="clients section" id="section-clients">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title fade-in"></h2>
-                <p class="section-subtitle fade-in"></p>
-            </div>
-            <div class="clients-grid"></div>
-        </div>
-    </section>
+<!-- CLIENTS -->
+<section class="clients section" id="section-clients">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title fade-in"></h2>
+<p class="section-subtitle fade-in"></p>
+</div>
+<div class="clients-grid"></div>
+</div>
+</section>
 
-    <!-- TESTIMONIALS -->
-    <section class="testimonials section" id="section-testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title fade-in"></h2>
-                <p class="section-subtitle fade-in"></p>
-            </div>
-            <div class="testimonials-grid"></div>
-        </div>
-    </section>
+<!-- TESTIMONIALS -->
+<section class="testimonials section" id="section-testimonials">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title fade-in"></h2>
+<p class="section-subtitle fade-in"></p>
+</div>
+<div class="testimonials-grid"></div>
+</div>
+</section>
 
-    <!-- CTA -->
-    <section class="cta section" id="section-cta">
-        <div class="container">
-            <h2 class="cta-title fade-in"></h2>
-            <p class="cta-subtitle fade-in"></p>
-            <div class="hero-buttons fade-in"></div>
-        </div>
-    </section>
+<!-- CTA -->
+<section class="cta section" id="section-cta">
+<div class="container">
+<h2 class="cta-title fade-in"></h2>
+<p class="cta-subtitle fade-in"></p>
+<div class="hero-buttons fade-in"></div>
+</div>
+</section>
 
-    <!-- CONTACT -->
-    <section class="contact section" id="section-contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title fade-in"></h2>
-                <p class="section-subtitle fade-in"></p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info fade-in">
-                    <h3>معلومات التواصل</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                        <div class="contact-details"><h4>الهاتف</h4><p dir="ltr" class="contact-phone"></p></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-details"><h4>البريد الإلكتروني</h4><p><a class="contact-email" href="#"></a></p></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-                        <div class="contact-details"><h4>واتساب</h4><p><a class="contact-wa" href="#" target="_blank"></a></p></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="contact-details"><h4>العنوان</h4><p class="contact-city"></p></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                        <div class="contact-details"><h4>ساعات العمل</h4><p class="contact-hours"></p></div>
-                    </div>
-                </div>
-                <form class="contact-form fade-in" id="contactForm">
-                    <h3 class="form-title" style="margin-bottom:28px;color:#0c4a6e;font-size:1.4rem;font-weight:700;"></h3>
-                    <div class="form-group"><label>الاسم الكامل *</label><input type="text" name="name" required></div>
-                    <div class="form-group"><label>البريد الإلكتروني *</label><input type="email" name="email" required></div>
-                    <div class="form-group"><label>رقم الهاتف *</label><input type="tel" name="phone" required></div>
-                    <div class="form-group"><label>نوع الاستفسار</label>
-                        <select id="service" name="service"></select>
-                    </div>
-                    <div class="form-group"><label>رسالتك *</label><textarea name="message" required></textarea></div>
-                    <button type="submit" class="btn btn-primary" style="width:100%;background:#0ea5e9;color:#fff;border:none;padding:15px;border-radius:30px;font-size:1rem;font-weight:600;font-family:inherit;transition:all .3s;"></button>
-                </form>
-            </div>
-        </div>
-    </section>
+<!-- CONTACT -->
+<section class="contact section" id="section-contact">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title fade-in"></h2>
+<p class="section-subtitle fade-in"></p>
+</div>
+<div class="contact-container">
+<div class="contact-info fade-in">
+<h3>معلومات التواصل</h3>
+<div class="contact-item">
+<div class="contact-icon"><i class="fas fa-phone"></i></div>
+<div class="contact-details"><h4>الهاتف</h4><p dir="ltr" class="contact-phone"></p></div>
+</div>
+<div class="contact-item">
+<div class="contact-icon"><i class="fas fa-envelope"></i></div>
+<div class="contact-details"><h4>البريد الإلكتروني</h4><p><a class="contact-email" href="#"></a></p></div>
+</div>
+<div class="contact-item">
+<div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+<div class="contact-details"><h4>واتساب</h4><p><a class="contact-wa" href="#" target="_blank"></a></p></div>
+</div>
+<div class="contact-item">
+<div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+<div class="contact-details"><h4>العنوان</h4><p class="contact-city"></p></div>
+</div>
+<div class="contact-item">
+<div class="contact-icon"><i class="fas fa-clock"></i></div>
+<div class="contact-details"><h4>ساعات العمل</h4><p class="contact-hours"></p></div>
+</div>
+</div>
+<form class="contact-form fade-in" id="contactForm">
+<h3 class="form-title" style="margin-bottom:28px;color:#0c4a6e;font-size:1.4rem;font-weight:700;"></h3>
+<div class="form-group"><label>الاسم الكامل *</label><input type="text" name="name" required></div>
+<div class="form-group"><label>البريد الإلكتروني *</label><input type="email" name="email" required></div>
+<div class="form-group"><label>رقم الهاتف *</label><input type="tel" name="phone" required></div>
+<div class="form-group"><label>نوع الاستفسار</label>
+<select id="service" name="service"></select>
+</div>
+<div class="form-group"><label>رسالتك *</label><textarea name="message" required></textarea></div>
+<button type="submit" class="btn btn-primary" style="width:100%;background:#0ea5e9;color:#fff;border:none;padding:15px;border-radius:30px;font-size:1rem;font-weight:600;font-family:inherit;transition:all .3s;"></button>
+</form>
+</div>
+</div>
+</section>
 
-    <!-- WHATSAPP FLOAT -->
-    <a href="#" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<!-- WHATSAPP FLOAT -->
+<a href="#" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3 class="footer-brand-name"></h3>
-                <p class="footer-about"></p>
-                <div class="social-links">
-                    <a id="footer-twitter"   href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a id="footer-linkedin"  href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a id="footer-instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a id="footer-youtube"   href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a id="footer-tiktok"    href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-            <div class="footer-dynamic-cols"></div>
-            <div class="footer-section">
-                <h3>تواصل معنا</h3>
-                <p><i class="fas fa-envelope" style="color:#0ea5e9;margin-left:6px"></i> <a class="footer-contact-email" href="#" style="color:rgba(255,255,255,.5);text-decoration:none"></a></p>
-                <p><i class="fas fa-phone" style="color:#0ea5e9;margin-left:6px"></i> <span class="footer-contact-phone" style="color:rgba(255,255,255,.5)"></span></p>
-                <p><i class="fab fa-whatsapp" style="color:#25d366;margin-left:6px"></i> <a class="footer-contact-wa" href="#" style="color:rgba(255,255,255,.5);text-decoration:none"></a></p>
-                <p><i class="fas fa-map-marker-alt" style="color:#0ea5e9;margin-left:6px"></i> <span class="footer-contact-city" style="color:rgba(255,255,255,.5)"></span></p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p class="footer-copyright"></p>
-        </div>
-    </footer>
+<!-- FOOTER -->
+<footer>
+<div class="footer-content">
+<div class="footer-section">
+<h3 class="footer-brand-name"></h3>
+<p class="footer-about"></p>
+<div class="social-links">
+<a id="footer-twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+<a id="footer-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a id="footer-instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+<a id="footer-youtube" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+<a id="footer-tiktok" href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+</div>
+</div>
+<div class="footer-dynamic-cols"></div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<p><i class="fas fa-envelope" style="color:#0ea5e9;margin-left:6px"></i> <a class="footer-contact-email" href="#" style="color:rgba(255,255,255,.5);text-decoration:none"></a></p>
+<p><i class="fas fa-phone" style="color:#0ea5e9;margin-left:6px"></i> <span class="footer-contact-phone" style="color:rgba(255,255,255,.5)"></span></p>
+<p><i class="fab fa-whatsapp" style="color:#25d366;margin-left:6px"></i> <a class="footer-contact-wa" href="#" style="color:rgba(255,255,255,.5);text-decoration:none"></a></p>
+<p><i class="fas fa-map-marker-alt" style="color:#0ea5e9;margin-left:6px"></i> <span class="footer-contact-city" style="color:rgba(255,255,255,.5)"></span></p>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="footer-copyright"></p>
+</div>
+</footer>
 
-    <div class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></div>
+<div class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></div>
 
-    <script src="config.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/cursor.js"></script>
-    <script>
-      // Mobile menu toggle
-      document.getElementById('mobileMenu').addEventListener('click', function(){
-        document.getElementById('navLinks').classList.toggle('open');
-      });
+<script src="config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/cursor.js"></script>
+<script>
+// Mobile menu toggle
+document.getElementById('mobileMenu').addEventListener('click', function(){
+document.getElementById('navLinks').classList.toggle('open');
+});
 
-      // Smooth scroll — handles both #features and #section-features
-      document.addEventListener('click', function(e){
-        const a = e.target.closest('a[href^="#"]');
-        if (!a) return;
-        const raw = a.getAttribute('href');
-        if (!raw || raw === '#') return;
-        e.preventDefault();
+// Smooth scroll — handles both #features and #section-features
+document.addEventListener('click', function(e){
+const a = e.target.closest('a[href^="#"]');
+if (!a) return;
+const raw = a.getAttribute('href');
+if (!raw || raw === '#') return;
+e.preventDefault();
 
-        const id = raw.slice(1); // e.g. "features" or "contact"
+const id = raw.slice(1); // e.g. "features" or "contact"
 
-        // Try direct id first, then with "section-" prefix
-        let target = document.getElementById(id)
-                  || document.getElementById('section-' + id)
-                  || document.querySelector(raw);
+// Try direct id first, then with "section-" prefix
+let target = document.getElementById(id)
+|| document.getElementById('section-' + id)
+|| document.querySelector(raw);
 
-        if (target) {
-          const offset = 70; // navbar height
-          const top = target.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }
+if (target) {
+const offset = 70; // navbar height
+const top = target.getBoundingClientRect().top + window.scrollY - offset;
+window.scrollTo({ top, behavior: 'smooth' });
+}
 
-        document.getElementById('navLinks').classList.remove('open');
-      });
+document.getElementById('navLinks').classList.remove('open');
+});
 
-      // Nav scroll effect + scroll-to-top
-      window.addEventListener('scroll', function(){
-        document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
-        const st = document.getElementById('scrollTop');
-        if (st) st.classList.toggle('visible', window.scrollY > 400);
-      });
-    </script>
+// Nav scroll effect + scroll-to-top
+window.addEventListener('scroll', function(){
+document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+const st = document.getElementById('scrollTop');
+if (st) st.classList.toggle('visible', window.scrollY > 400);
+});
+</script>
 </body>
 </html>
